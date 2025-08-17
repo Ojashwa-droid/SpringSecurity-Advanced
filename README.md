@@ -31,4 +31,12 @@ This section covers: 1. Invocation Authorization 2. Filtering Authorization
 
 **Folder:** `section12/springsecsection12`
 
+---
+
+### 🔑 Section 14 → OAuth2.0 Social Login (SSR-style)
+This section covers: Social Login via github and facebook (in Spring MVC demo application). We integrate **OAuth2.0 social logins** (e.g., GitHub, Facebook, Google) into a Spring Security application.  
+
+- Configuring a custom SecurityFilterChain Bean
+- Bean of ClientRegistrationRepository 
+- Registering and utilizing clients (github, facebook)
 
