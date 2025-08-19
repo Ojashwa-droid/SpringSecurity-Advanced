@@ -82,7 +82,8 @@ This makes our backend application act as a **Resource Server**, while Keycloak 
 
 ✅ With Keycloak, our application is now **enterprise-ready** with secure, standards-based Identity and Access Management.  
 
-
+# Below is a screenshot of implementing MFA (Multi-factor authentication) in the project
+<img width="800" height="900" alt="Screenshot 2025-08-19 112952" src="https://github.com/user-attachments/assets/722604cd-b71d-4fc8-b211-372c5ca7c538" />
 
 
 
