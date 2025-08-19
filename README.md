@@ -40,3 +40,54 @@ This section covers: Social Login via github and facebook (in Spring MVC demo ap
 - Bean of ClientRegistrationRepository 
 - Registering and utilizing clients (github, facebook)
 
+---
+
+### Section 15 → Oauth2.0 with Keycloak Identity & Access Management (IAM) 🛡️
+
+In this section, we integrate **Keycloak** as our centralized **Authentication and Authorization server**.  
+
+🔑 What is Keycloak?
+Keycloak is an open-source Identity and Access Management (IAM) solution that provides:
+- Single Sign-On (SSO)  
+- User federation (connect with LDAP/Active Directory)  
+- Role-based access control (RBAC)  
+- OAuth2, OpenID Connect (OIDC)
+
+Instead of managing users and roles directly in our application, we **delegate all IAM responsibilities to Keycloak**.  
+This makes our backend application act as a **Resource Server**, while Keycloak plays the role of **Authorization Server**.  
+
+
+## ⚙️ How It Works in my Project
+1. **Keycloak Server Setup**  
+   - A realm is created in Keycloak (e.g., `my-app-realm`).  
+   - Clients are registered in the realm (e.g., `postman-client`).  
+   - Users are created/registered and roles are defined and assigned to users.  
+
+2. **Spring Boot Integration**  
+   - We configure our backend as a **Resource Server**.  
+   - It validates JWT tokens issued by Keycloak (opaque tokens are kept as a option as well) 
+   - Access to APIs is controlled based on roles/permissions defined in Keycloak and authroized in our resource server (SprinngBoot Application).  
+
+3. **Authentication Flow**  
+   - The user logs in through Keycloak’s login page.  
+   - Keycloak authenticates the user and issues an **access token**.  
+   - The token is passed in the `Authorization` header to our Spring Boot backend.  
+   - The backend validates the token and grants/denies access to resources.  
+
+## 🏗️ Benefits
+- Centralized authentication & authorization  
+- No need to store passwords in the backend  
+- Easy integration with modern security standards (OAuth2, OIDC)  
+- Supports enterprise features like SSO and user federation  
+
+✅ With Keycloak, our application is now **enterprise-ready** with secure, standards-based Identity and Access Management.  
+
+
+
+
+
+
+
+
+
+
