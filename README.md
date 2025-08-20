@@ -127,7 +127,7 @@ It issues **JWT tokens**, supports **OpenID Connect (OIDC)**, and is configured 
 - **Registered Clients**:
   1. **Client Credentials Flow**
      - `client_id`: `ojasbankapi`  
-     - `client_secret`: `VxubZgAXyyTq9lGjj3qGvWNsHtE4SqTq`
+     - `client_secret`: `<client secret>`
      - Scopes: `openid`, `ADMIN`, `USER`
   2. **Authorization Code + Refresh Token Flow**
      - `client_id`: `ojasbankclient`  
