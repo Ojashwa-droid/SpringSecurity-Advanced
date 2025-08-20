@@ -151,6 +151,50 @@ Once the server is running, visit:
 <img width="800" height="900" alt="image" src="https://github.com/user-attachments/assets/bb889469-3ef6-4902-9c1e-b64b17ab7a09" />
 
 ---
+
+## ✅ Best Practices Implemented
+
+Throughout the different modules and sections of this project, several **Spring Security and Authentication best practices** have been consistently applied:
+
+1. **Password Security**
+   - All passwords are stored in **hashed form** using strong encoders (e.g., `BCryptPasswordEncoder`) instead of plain text. Although, this project implements delegating password Encoders to support multiple types of Password Encoders (for best practices - in order to support previous versions of password encoders)
+2. **JWT Security**
+   - Access Tokens are **digitally signed (RSA/HS256)** to prevent tampering.
+   - Token validation is strictly enforced via custom filters and authentication providers.
+   - Short-lived **access tokens** and **refresh tokens** are used for improved security.
+
+3. **Role-Based & Method-Level Authorization**
+   - Fine-grained authorization using `@PreAuthorize`, `@PostAuthorize`, `@PreFilter`, and `@PostFilter`.
+   - Clear separation of **roles vs authorities** to maintain principle of least privilege.
+
+4. **OAuth2 and OpenID Connect**
+   - Secure integration with external providers (Google, GitHub, Facebook).
+   - Proper handling of **PKCE** (Proof Key for Code Exchange) for public clients to prevent authorization code interception.
+
+5. **Keycloak as External IAM**
+   - Delegated authentication & user management to **Keycloak** for centralized IAM.
+   - Backend apps only act as **resource servers**, following separation of concerns.
+
+6. **Spring Authorization Server**
+   - Implemented multiple OAuth2 grant types (`client_credentials`, `authorization_code`, `refresh_token`).
+   - **OIDC compliance** with support for ID Tokens and UserInfo endpoint.
+   - JWK (JSON Web Key) set published for public key distribution.
+
+7. **Database Security**
+   - Separation of concerns using **H2 (in-memory DB)** for testing and **MySQL** for production-level persistence.
+   - No sensitive credentials hardcoded in code (externalized configuration).
+
+8. **CSRF, CORS, and Session Management**
+   - Stateless APIs rely on JWT → **CSRF disabled appropriately**.
+   - Proper **CORS configuration** for secure cross-origin requests.
+   - Session fixation protection enabled in form login scenarios.
+
+9. **Code Organization & Modularity**
+   - Security concerns separated into dedicated config classes and filters.
+   - Each advanced topic is implemented in **its own module/section**, ensuring clarity and maintainability.
+
+
+---
 ## 👨‍💻 Author
 Hi, I'm **Ojashwa Tripathi**  
 Backend Development | Java, Spring Boot, Spring Security & Spring Authorization Server | Exploring Spring 
