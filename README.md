@@ -7,10 +7,23 @@ Repository for advanced Spring Security concepts 🔒 including:
 - **Keycloak Integration**
 - **Spring Authorization Server**
 
+  ## 🛠 Tech Stack
+
+| Category             | Technologies |
+|-----------------------|--------------|
+| *Language*          | ☕ Java 21 |
+| *Frameworks*        | 🌿 Spring Boot, 🛡 Spring Security |
+| *Security Protocols*| 🔑 JWT, OAuth2.0, OpenID Connect1.0 (OIDC) |
+| *IAM Solutions*     | 🏰 Keycloak, 🚦 Spring Authorization Server |
+| *Databases*         | 🐬 MySQL, ⚡ H2 Database |
+| *Build Tool*        | ⚡ Maven |
+| *Tools & Clients*   | 📬 Postman |
+| *Version Control*   | 🌍 Git & GitHub |
+
 
 ## Sections
 
-### Section 11 → JWT
+### 🔑 Section 11: JWT
 This section covers:
 - Generating JWT tokens (JwtTokenGeneratorFilter)
 - Validating tokens (JwtTokenValidatorFilter)
@@ -22,7 +35,7 @@ This section covers:
 
 ---
 
-### Section 12 → Method Level Security
+### 🔑 Section 12: Method Level Security
 This section covers: 1. Invocation Authorization 2. Filtering Authorization
 - `@PreAuthorize` and `@PostAuthorize`
 - Role-based access control on methods
@@ -35,7 +48,7 @@ This section covers: 1. Invocation Authorization 2. Filtering Authorization
 
 ---
 
-### 🔑 Section 14 → OAuth2.0 Social Login (SSR-style)
+### 🔑 Section 14: OAuth2.0 Social Login (SSR-style)
 This section covers: Social Login via github and facebook (in Spring MVC demo application). We integrate **OAuth2.0 social logins** (e.g., GitHub, Facebook, Google) into a Spring Security application.  
 
 - Configuring a custom SecurityFilterChain Bean
@@ -44,11 +57,11 @@ This section covers: Social Login via github and facebook (in Spring MVC demo ap
 
 ---
 
-### Section 15 → Oauth2.0 with Keycloak Identity & Access Management (IAM) 🛡️
+### 🔑 Section 15: Oauth2.0 with Keycloak Identity & Access Management (IAM) 
 
 In this section, we integrate **Keycloak** as our centralized **Authentication and Authorization server**.  
 
-🔑 What is Keycloak?
+🛡️ What is Keycloak?
 Keycloak is an open-source Identity and Access Management (IAM) solution that provides:
 - Single Sign-On (SSO)  
 - User federation (connect with LDAP/Active Directory)  
@@ -90,7 +103,7 @@ This makes our backend application act as a **Resource Server**, while Keycloak 
 
 ---
 
-## Section 16: Spring Authorization Server (SAS)
+## 🔑 Section 16: Spring Authorization Server (SAS)
 
 This module demonstrates the implementation of a fully functional **OAuth2 Authorization Server** using **Spring Authorization Server** and **Spring Security**.  
 It issues **JWT tokens**, supports **OpenID Connect (OIDC)**, and is configured with multiple OAuth2 grant types for different kinds of clients.
@@ -139,7 +152,7 @@ Once the server is running, visit:
 
 ---
 ## 👨‍💻 Author
-**Ojashwa Tripathi**  
+Hi, I'm **Ojashwa Tripathi**  
 Backend Development | Java, Spring Boot, Spring Security & Spring Authorization Server | Exploring Spring 
 - 🔗 [GitHub](https://github.com/Ojashwa-droid) | [LinkedIn](https://www.linkedin.com/in/ojashwa-tripathi)
 
